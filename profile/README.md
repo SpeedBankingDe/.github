@@ -20,11 +20,13 @@ Fast, allocation-free, zero-dependency Java tooling for IBAN, BIC and German ban
 
 We build [iban-commons](https://github.com/SpeedBankingDe/iban-commons), a Java library for parsing, validating and formatting IBANs (ISO 13616) and BICs (ISO 9362). It covers 127 countries, runs on Java 8 and Android, and the core has no dependencies outside the JDK. Validation does not allocate, which makes it a good fit for batch processing, payment pipelines and anything else that checks a lot of account numbers.
 
+Add it with Maven (use the current version from the Maven Central badge in place of X.Y.Z):
+
 ```xml
 <dependency>
     <groupId>de.speedbanking</groupId>
     <artifactId>iban-commons</artifactId>
-    <version>1.8.12</version>
+    <version>X.Y.Z</version>
 </dependency>
 ```
 
