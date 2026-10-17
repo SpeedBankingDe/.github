@@ -49,17 +49,9 @@ iban.toFormattedString();  // "DE91 1000 0000 0123 4567 89"
 | [`iban-commons-validation`](https://github.com/SpeedBankingDe/iban-commons/tree/master/iban-commons-validation) | Jakarta Bean Validation constraints `@ValidIban` and `@ValidBic` |
 | [`iban-commons-junit`](https://github.com/SpeedBankingDe/iban-commons/tree/master/iban-commons-junit) | JUnit 5 sources for parameterized tests over countries and random IBANs |
 
-### How fast?
+### How does it compare?
 
-Measured with JMH against the other Java IBAN libraries, rejecting invalid IBANs on a single core. Setup, raw numbers and the accept path are in [iban-commons-benchmarks](https://github.com/SpeedBankingDe/iban-commons-benchmarks).
-
-| Library | ops/s | B/op |
-|---------|------:|-----:|
-| **iban-commons** | **10,740,280** | **0** |
-| jbanking | 7,880,633 | 154 |
-| Apache Commons Validator | 6,531,841 | 247 |
-| garvelink iban | 2,250,043 | 647 |
-| iban4j | 1,801,759 | 1,156 |
+Compared with the other Java IBAN libraries (iban4j, jbanking, Apache Commons Validator, garvelink iban), iban-commons leads in throughput, allocates no memory during validation and supports more countries, while staying free of dependencies. The JMH setup and current results are in [iban-commons-benchmarks](https://github.com/SpeedBankingDe/iban-commons-benchmarks).
 
 ### Get involved
 
